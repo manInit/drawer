@@ -5344,7 +5344,7 @@ if (canvas) {
         x: 0,
         y: 0,
     };
-    socket = (0, socket_io_client_1.io)('http://localhost:3000/');
+    socket = (0, socket_io_client_1.io)();
     socket.on('init-connect', (msg) => {
         loginRooms.innerHTML = '';
         const rooms = JSON.parse(msg).rooms;
