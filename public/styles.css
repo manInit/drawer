@@ -1,0 +1,51 @@
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/notify/alert.scss ***!
+  \***************************************************************************************************************************/
+.alerts__container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.alert {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #0091d4;
+  font-size: 14px;
+  color: #fff;
+}
+/*!**************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/user-cursor/user-cursor.scss ***!
+  \**************************************************************************************************************************************/
+.user-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  transform: rotate(-70deg);
+}
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
+  \**************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+canvas {
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map*/
