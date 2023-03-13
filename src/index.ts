@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:8080',
+    origin: 'http://localhost:3001',
     methods: ['GET', 'POST'],
   },
 });
@@ -64,9 +64,16 @@ io.on('connection', (socket) => {
     );
   });
   socket.on('join-room', (msg) => {
-    const roomId = JSON.parse(msg).id;
+    const data = JSON.parse(msg);
+    const roomId = data.id;
+    const userName = data.userName;
     socket.join(roomId);
-    socket.broadcast.to(roomId).emit('user-connect');
+    socket.broadcast.to(roomId).emit(
+      'user-connect',
+      JSON.stringify({
+        userName,
+      })
+    );
     socket.emit(
       'id-room',
       JSON.stringify({
